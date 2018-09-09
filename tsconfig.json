@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": false,
+    "declaration": true,
+    "rootDir": "./lib",
+    "outDir": "./dist",
+    "watch": false
+  },
+  "include": [
+    "./lib/**/*"
+  ]
+}
