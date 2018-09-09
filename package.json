@@ -1,0 +1,25 @@
+{
+  "name": "yonh",
+  "version": "0.0.1",
+  "description": "A simple lookup table for Guangyun.",
+  "author": "Karinsu <m80126colin@gmail.com>",
+  "license": "GPL-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/m80126colin/yonh/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m80126colin/yonh.git"
+  },
+  "keywords": [
+    "guangyun",
+    "chinese",
+    "rhyme"
+  ],
+  "dependencies": {
+    "@types/lodash": "^4.14.116",
+    "lodash": "^4.17.10"
+  }
+}
