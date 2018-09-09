@@ -15,7 +15,8 @@
   },
   "keywords": [
     "guangyun",
-    "chinese"
+    "chinese",
+    "rhyme"
   ],
   "dependencies": {
     "@types/lodash": "^4.14.116",
