@@ -34,7 +34,7 @@ yonh.lookup('東')
 #### Arguments
 
 * `index`: `number`, an unique number indicating specific Sinograph
-* `hanzi`: `string`, a Sinograph, Chinese Character
+* `hanzi`: `string`, a Sinograph, Chinese character
 
 #### Returns
 
@@ -59,15 +59,28 @@ One object or an array of objects with following form:
 }
 ```
 
+* `zih`: a Sinogram, Chinese character
+* `sieux`: a fundamental category of rime (小韻) in Guangyun
+* `chet`: [fanqie](https://en.wikipedia.org/wiki/Fanqie) (反切), a technique to represent the pronounciation of a Chinese character by using two characters instead, in Guangyun
+* `initial`: the initial of `zih`, see [Lookup.Initial](#lookupinitial)
+* `final`: the final of `zih`, see [Lookup.Final](#lookupfinal)
+* `tone`: `平聲`, `上聲`, `去聲` or `入聲`, the category of the tone in Middle Chinese
+* `roman`: a romanisation of `zih`, see [Romanisation](#romanisation)
+* `kanon`: the pronounciation of `zih` in Kan-on system (漢音) in Japanese
+* `kuangx`: the content of `zih` appeared in Guangyun
+
 #### Lookup.Initial
 
 ``` ts
 {
   index: number,
-  sjeng: string,
-  roman: string
+  roman: string,
+  sjeng: string
 }
 ```
+
+* `roman`: a romanisation of initial, see [Romanisation](#romanisation)
+* `sjeng`: a Sinogram indicating the category of initial (聲母)
 
 #### Lookup.Final
 
@@ -81,6 +94,17 @@ One object or an array of objects with following form:
   sjep:  string
 }
 ```
+
+* `roman`: a romanisation of final, see [Romanisation](#romanisation)
+* `yonh`: category of final (韻母), which is differnent from the rimes (韻) in Guangyun
+* `tongx`: `1` to `4`, indicating the level (等) of Chinese character, which is one of Medial (介音) description system in Middle Chinese
+* `ho`: `開口`, `合口` or `開合`, another Medial description system in Middle Chinese (呼)
+* `sjep`: a Sinogram indicating the category of the main vowel (攝)
+
+Romanisation
+---
+
+The romanisation for Middle Chinese is created and promoted by [Polyhedron](https://zh.wikipedia.org/wiki/User:Polyhedron/%E4%B8%AD%E5%8F%A4%E6%BC%A2%E8%AA%9E%E6%8B%BC%E9%9F%B3).
 
 License
 ---
