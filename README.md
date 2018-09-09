@@ -93,3 +93,6 @@ Sources
 * [Full Word List for Guangyun](http://www.newsmth.net/bbscon.php?bid=203&id=41087) (廣韻全字表), powered by **polyhedron** and **zgheng**.
 * [XML Data for Guangyun](http://kanji-database.sourceforge.net/dict/sbgy/index.html) (宋本廣韻データ)
 * [韻典網](https://ytenx.org/kyonh/)
+
+[repo]: https://github.com/m80126colin/yonh/
+[npm]: https://www.npmjs.com/package/yonh
