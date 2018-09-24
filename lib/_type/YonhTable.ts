@@ -1,4 +1,4 @@
-export namespace Lookup {
+export namespace YonhTable {
   interface Roman {
     index: number,
     roman: string
