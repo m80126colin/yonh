@@ -1,9 +1,9 @@
 import * as _ from 'lodash';
 
-import { Lookup } from './_types';
+import { YonhTable } from '../_type';
 import * as sieux from '../../data/sieux.json';
 
-const table : Lookup.Zih[] = _.flatMap(sieux, data => _.map(data[0], z => {
+const table : YonhTable.Zih[] = _.flatMap(sieux, data => _.map(data[0], z => {
   return {
     index: z[1],
     zih:   z[0],

@@ -1,9 +1,9 @@
 import * as _ from 'lodash';
 
-import { Lookup } from './_types';
+import { YonhTable } from '../_type';
 import * as final from '../../data/final.json';
 
-const table : Lookup.Final[] = _.map(final, data => {
+const table : YonhTable.Final[] = _.map(final, data => {
   return {
     index: data[0],
     yonh:  data[1],
