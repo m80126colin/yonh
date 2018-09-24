@@ -24,12 +24,14 @@ Usage
 
 ``` js
 var yonh = require('yonh')
-
+// lookup through chinese character or index
 yonh.lookup(1)
 yonh.lookup('東')
+// list of fundamental category of rime in Guangyun
+yonh.sieux()
 ```
 
-### lookup(index|hanzi)
+### yonh.lookup(index|hanzi)
 
 #### Arguments
 
@@ -46,8 +48,8 @@ One object or an array of objects with following form:
   zih:       string,
   sieux:     string,
   chet:      string,
-  initial:   Lookup.Initial,
-  final:     Lookup.Final,
+  initial:   Table.Initial,
+  final:     Table.Final,
   tone:      string,
   roman:     string,
   kanon:     string,
@@ -62,14 +64,14 @@ One object or an array of objects with following form:
 * `zih`: a Sinogram, Chinese character
 * `sieux`: a fundamental category of rime (小韻) in Guangyun
 * `chet`: [fanqie](https://en.wikipedia.org/wiki/Fanqie) (反切), a technique to represent the pronounciation of a Chinese character by using two characters instead, in Guangyun
-* `initial`: the initial of `zih`, see [Lookup.Initial](#lookupinitial)
-* `final`: the final of `zih`, see [Lookup.Final](#lookupfinal)
+* `initial`: the initial of `zih`, see [Table.Initial](#tableinitial)
+* `final`: the final of `zih`, see [Table.Final](#tablefinal)
 * `tone`: `平聲`, `上聲`, `去聲` or `入聲`, the category of the tone in Middle Chinese
 * `roman`: a romanisation of `zih`, see [Romanisation](#romanisation)
 * `kanon`: the pronounciation of `zih` in Kan-on system (漢音) in Japanese
 * `kuangx`: the content of `zih` appeared in Guangyun
 
-#### Lookup.Initial
+#### Table.Initial
 
 ``` ts
 {
@@ -82,7 +84,7 @@ One object or an array of objects with following form:
 * `roman`: a romanisation of initial, see [Romanisation](#romanisation)
 * `sjeng`: a Sinogram indicating the category of initial (聲母)
 
-#### Lookup.Final
+#### Table.Final
 
 ``` ts
 {
@@ -100,6 +102,34 @@ One object or an array of objects with following form:
 * `tongx`: `1` to `4`, indicating the level (等) of Chinese character, which is one of Medial (介音) description system in Middle Chinese
 * `ho`: `開口`, `合口` or `開合`, another Medial description system in Middle Chinese (呼)
 * `sjep`: a Sinogram indicating the category of the main vowel (攝)
+
+### yonh.sieux()
+
+A list of fundamental category of rime (小韻).
+
+#### Returns
+
+``` ts
+{
+  index:    number,
+  sieux:    string,
+  chet:     string,
+  initial:  Table.Initial,
+  final:    Table.Final,
+  tone:     string,
+  roman:    string,
+  kanon:    string,
+  kuangx:   string,
+  list_zih: {
+    index: number,
+    zih:   string
+  }[]
+}
+```
+
+* `index`: an unique number
+* `sieux`, `chet`, `initial`, `final`, `tone`, `roman`, `kanon`, `kuangx`: see [yonh.lookup(index|hanzi)](#yonhlookupindexhanzi)
+* `list_zih`: a list of Sinograph with index and character
 
 Romanisation
 ---
