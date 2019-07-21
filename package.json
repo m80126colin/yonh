@@ -1,11 +1,21 @@
 {
   "name": "yonh",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple lookup table for Guangyun.",
   "author": "Karinsu <m80126colin@gmail.com>",
   "license": "GPL-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.136",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  },
   "bugs": {
     "url": "https://github.com/m80126colin/yonh/issues"
   },
@@ -17,9 +27,5 @@
     "guangyun",
     "chinese",
     "rhyme"
-  ],
-  "dependencies": {
-    "@types/lodash": "^4.14.116",
-    "lodash": "^4.17.10"
-  }
+  ]
 }
